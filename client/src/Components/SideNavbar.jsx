@@ -43,13 +43,13 @@ export default function SideNavbar(props) {
             <div className={`side-navbar ${(navbarToggle) ? "active-nav" : ""} d-flex justify-content-between flex-wrap flex-column`} style={{ zIndex: 1000 }} id="sidebar">
                 <ul className="nav flex-column text-white w-100">
                     <Link to="/" className="nav-link1 h3 my-2 text-center">
-                        <img src={logo} alt="" />
+                        <img className='logo' src={logo} alt="" />
                     </Link>
                     <li href="#" className="nav-link m-2">
                         <Link to="/" style={{textDecoration:"none",color:"#202020"}}>
                         {/* <i className="bx bxs-dashboard"></i> */}
-                        <img src={image3} alt="" />
-                        <span className="mx-2"> Connect Profiles</span>
+                        <img src={image2} alt="" />
+                        <span className="mx-2 hide-at-small"> Connect Profiles</span>
                         {navbarToggle && <img src={arrow} alt="" style={{ float: "right" }} />}
                         </Link>
                     </li>
@@ -57,7 +57,7 @@ export default function SideNavbar(props) {
                         {/* <i className="bx bx-user-check"></i> */}
                         <Link to="/content" style={{textDecoration:"none",color:"#202020"}}>
                         <img src={image1} alt="" />
-                        <span className="mx-2">Generate Content</span>
+                        <span className="mx-2 hide-at-small">Generate Content</span>
                         {navbarToggle && <img src={arrow} alt="" style={{ float: "right" }} />}
                         </Link>
 
@@ -67,7 +67,7 @@ export default function SideNavbar(props) {
                         
                         <img src={image3} alt="" />
                         {/* <i className="bx bx-conversation"></i> */}
-                        <span className="mx-2">Post's Performance</span>
+                        <span className="mx-2 hide-at-small">Post's Performance</span>
                         {navbarToggle && <img src={arrow} alt="" style={{ float: "right" }} />}
                     </Link>
                     </li>
